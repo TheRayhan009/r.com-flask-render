@@ -30,7 +30,7 @@ header {
 }
 
 #about .image-container img {
-    width: calc(33.33% - 10px); /* Adjust this value based on your layout */
+    width: calc(50.00% - 30px); /* Adjust this value based on your layout */
     max-height: 200px; /* Limit the height of the images */
     object-fit: cover; /* Maintain aspect ratio */
     border-radius: 5px; /* Add rounded corners */
