@@ -23,6 +23,19 @@ header {
     text-align: center;
 }
 
+#about .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#about .image-container img {
+    width: calc(33.33% - 10px); /* Adjust this value based on your layout */
+    max-height: 200px; /* Limit the height of the images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add rounded corners */
+}
+
 header h1 {
     margin: 0;
     font-size: 2em;
