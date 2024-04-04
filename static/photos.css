@@ -27,6 +27,9 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    top: 0;
+    width: 100%; /* Make the header span the full width */
+    z-index: 1000; /* Ensure the header appears above other elements */
     border-radius: 30px;
 }
 
@@ -43,16 +46,45 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
+    position: relative; /* Make the position relative to this element */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s; /* Add transition for smoother color change */
+    position: relative; /* Make the position relative to this element */
 }
 
+/* Define the animation */
+@keyframes wiggle {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/* Apply the animation to the navigation links */
 nav ul li a:hover {
-    color: #ffd700; /* Change text color on hover */
+    color: #000000; /* Change text color on hover */
+    animation: wiggle 0.5s ease infinite alternate; /* Apply the animation */
+}
+
+/* Add line on hover */
+nav ul li a::after {
+    content: ''; /* Add content */
+    position: absolute; /* Position absolute */
+    left: 0; /* Align to the left */
+    bottom: -2px; /* Adjust as needed */
+    width: 0; /* Initially no width */
+    height: 2px; /* Line height */
+    background-color: #000000; /* Line color */
+    transition: width 0.3s ease; /* Transition effect */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Make line visible on hover */
 }
 
 /* Main content styles */
@@ -62,6 +94,8 @@ main {
 main h2{
     padding: 10px;
 }
+
+
 
 /* Gallery styles */
 .gallery {
@@ -101,4 +135,14 @@ footer {
     width: 100%;
     z-index: 0; /* Ensure the footer appears above other elements */
     border-radius: 30px;
+}
+.logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 200px;
 }
