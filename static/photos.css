@@ -74,17 +74,19 @@ main h2{
     width: calc(33.33% - 20px); /* Adjust the width based on your layout */
     text-align: center;
     margin-bottom: 20px;
+    padding: 10px; /* Add padding to prevent overlapping */
+    margin: 41px;
 }
 
 .gallery-item img {
     width: 100%; /* Ensure images fill the entire width of the gallery item */
-    height: 400px; /* Set a fixed height for the images */
+    height: 100%; /* Set a fixed height for the images */
     object-fit: cover; /* Maintain aspect ratio while covering the container */
     border-radius: 5px;
 }
 
 .gallery-item p {
-    margin-top: 10px;
+    margin-top: -3px;
     color: #ccc;
 }
 
