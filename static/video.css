@@ -43,16 +43,34 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
+    position: relative; /* Position relative for pseudo elements */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s; /* Add transition for smoother color change */
+    position: relative;
 }
 
 nav ul li a:hover {
-    color: #ffd700; /* Change text color on hover */
+    color: #000000; /* Change text color on hover */
+}
+
+/* Add sliding animation to navigation links */
+nav ul li a::before {
+    content: ''; /* Add content */
+    position: absolute; /* Position absolute */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 0; /* Initially no width */
+    height: 2px; /* Line height */
+    background-color: #000000; /* Line color */
+    transition: width 0.3s ease; /* Transition effect */
+}
+
+nav ul li a:hover::before {
+    width: 100%; /* Make line visible on hover */
 }
 
 /* Main content styles */
@@ -71,7 +89,7 @@ main h2{
 }
 
 .gallery-item {
-    /* width: calc(33.33% - 20px);  */
+    width: calc(33.33% - 20px); /* Adjust this value based on your layout */
     text-align: center;
     margin-bottom: 20px;
     padding: 10px; /* Add padding to prevent overlapping */
@@ -101,4 +119,14 @@ footer {
     width: 100%;
     z-index: 0; /* Ensure the footer appears above other elements */
     border-radius: 30px;
+}
+.logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 200px;
 }
