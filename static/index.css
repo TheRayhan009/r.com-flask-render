@@ -114,3 +114,28 @@ footer {
 .image-text-container h3 {
     margin: 0;
 }
+#contact img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px;
+}#contact {
+    display: flow; /* Use flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+/* Logo container styles */
+.logo-container {
+    display: flex; /* Use flexbox */
+    /* justify-content: center;  */
+}
+
+/* Logo styles */
+.logo-container a {
+    margin: 0 10px; /* Adjust spacing between logos */
+}
+
+.logo-container img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 80px;
+}
