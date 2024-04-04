@@ -8,4 +8,3 @@ def home():
 def photo():
     return render_template("photos.html")
 
-app.run(debug=True)
