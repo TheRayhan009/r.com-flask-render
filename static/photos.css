@@ -146,3 +146,12 @@ footer {
     margin-top: 50px;
     border-radius: 200px;
 }
+.gallery-item img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}.gallery-item img:not(:hover) {
+    /* filter: grayscale(100%); */
+    transform: scale(0.9); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
