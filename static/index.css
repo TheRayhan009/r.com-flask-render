@@ -137,12 +137,14 @@ footer {
 .image-text-container img {
     max-width: 100%; /* Ensure images don't exceed container width */
     max-height: 200px; /* Limit the height of the images */
-    margin-bottom: 10px; /* Add margin between image and text */
-    border-radius: 5px; /* Add rounded corners */
+    margin-bottom: 9px; /* Add margin between image and text */
+    margin-top: 60px;
+    margin-right: 1px;
+    border-radius: 10px; /* Add rounded corners */
 }
 
 .image-text-container h3 {
-    margin: 0;
+    margin: 6px;
 }
 
 #contact img {
@@ -182,4 +184,12 @@ footer {
     margin-left: 100px;
     margin-top: 50px;
     border-radius: 200px;
+}
+.image-text-container img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}.image-text-container img:not(:hover) {
+    transform: scale(1.4); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease;
 }
