@@ -10,4 +10,5 @@ def photo():
 @app.route('/video')
 def video():
     return render_template("video.html")
-
+def fb_clon():
+    return render_template("clon.html")
