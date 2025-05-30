@@ -24,26 +24,46 @@ header {
     background-color: #251f2e;
     color: #fff;
     padding: 20px;
-    text-align: center;
     width: 100%;
     z-index: 1000;
     border-radius: 30px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    padding: 10px;
+/* Site header layout */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+/* Logo and title */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* Navigation styles */
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding-left: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
     position: relative;
 }
 
@@ -52,6 +72,7 @@ nav ul li a {
     color: #fff;
     transition: color 0.3s;
     position: relative;
+    font-weight: 500;
 }
 
 /* Wiggle animation */
@@ -84,7 +105,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Main section styles */
+/* Section styles */
 section {
     padding: 20px;
     margin: 20px 0;
@@ -168,51 +189,22 @@ footer {
     border-radius: 80px;
 }
 
-/* Site header (flex layout) */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-
-.logo-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo {
-    height: 40px;
-}
-
-.site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-}
-
-/* Responsive design for smaller screens */
+/* Responsive design */
 @media (max-width: 768px) {
     .image-text-container {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .nav-links {
+    .site-header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     header h1 {
